@@ -1,0 +1,47 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ button#load_ig.loading{
+  pointer-events:none;
+  background:#aaa;
+  border-color:#aaa;
+  content:'loading';
+}
+.data-ig-container{
+  width:100%;
+  min-height:200px;
+  border:1px solid #ccc;
+  padding:10px;
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  margin-bottom:10px;
+  max-height:500px;
+  overflow:auto;
+}
+.data-ig-container .list-item-ig{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  border:1px solid #000;
+  margin-bottom:10px;
+}
+.data-ig-container .list-item-ig .img-wrapper{
+  width:200px;
+  border-right:1px solid;
+}
+.data-ig-container .list-item-ig .img-wrapper img{
+  width:100%;
+  height:100%;
+  -o-object-fit:cover;
+     object-fit:cover;
+}
+.data-ig-container .list-item-ig .text-wrapper{
+  padding-left:10px;
+}
+#zenigfeed_plugin_dashboard .source_option{
+  display:none;
+}
+#zenigfeed_plugin_dashboard .source_option.active{
+  display: block;
+}

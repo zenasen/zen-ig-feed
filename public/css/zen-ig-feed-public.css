@@ -1,0 +1,35 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+ .zigfeed-container.grid{
+  display:grid;
+}
+.zigfeed-container.grid .zrow{
+  display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  margin-left:-15px;
+  margin-right:-15px;
+}
+.zigfeed-container.grid .ig-item{
+  width:100%;
+  padding-left:15px;
+  padding-right:15px;
+  box-sizing:border-box;
+  margin-bottom:30px;
+}
+
+.zigfeed-container.grid .ig-item a{
+  display:block;
+  width:100%;
+  padding-bottom:100%;
+  position:relative;
+}
+.zigfeed-container.grid .ig-item img{
+  width:100%;
+  height:100%;
+  position:absolute;
+  object-fit:cover;
+}
