@@ -29,4 +29,48 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 
+	$( document ).ready(function() {
+		if ($('.zigfeed-container') == 0) {
+			return;
+		}
+		var zigfeed = $('.zigfeed-container'), 
+			fired = false;
+		window.addEventListener("scroll", function() {
+			if ((document.documentElement.scrollTop != 0 && fired === false) || (document.body.scrollTop != 0 && fired === false)) {
+				fired = true;
+				zigfeed.each(function(){
+					var this_ig = $(this);
+					var this_imgs = this_ig.find(".ig-img");
+					this_imgs.each(function(){
+						var this_img_n = $(this);
+						var src = this_img_n.attr("xsrc");
+						this_img_n.attr("src",src);
+					});
+					var this_ig_row = this_ig.find(".zrow");
+					$(this_ig_row).slick({
+						dots: false,
+						autoplay: false,
+						autoplaySpeed: 6000,
+						speed: 500,
+						arrows: true,
+						nextArrow: '<div class="next"></div>',
+						prevArrow: '<div class="prev"></div>',
+						slidesToShow: 3,
+						centerMode: true,
+						centerPadding: '17%',
+						responsive: [
+							{
+								breakpoint: 769,
+								settings: {
+									slidesToShow: 1,
+								}
+							},
+						],
+					});
+
+				});
+			}
+		}, true);
+	});
+
 })( jQuery );

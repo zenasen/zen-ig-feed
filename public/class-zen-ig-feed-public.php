@@ -132,7 +132,6 @@ class Zen_Ig_Feed_Public {
 				break;
 			}
 
-
 			$id = $value->id;
 			$type = $value->media_type;
 			$el_img = $value->media_url;	
@@ -144,7 +143,7 @@ class Zen_Ig_Feed_Public {
 			// $el_link
 			$el_items .= '<div class="ig-item '.$type.' ">
 							<a href="'.$el_link.'" target="_blank" rel="nofollow noopener">
-								<img src="'.$el_img.'" alt="Instagram Image">
+								<img class="ig-img" xsrc="'.$el_img.'" alt="Instagram Image">
 							</a>
 						  </div>';	
 		}
